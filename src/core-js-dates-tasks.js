@@ -232,10 +232,7 @@ function getNextFridayThe13th(date) {
   nextDate.setHours(0, 0, 0, 0);
   nextDate.setDate(13);
 
-  while (true) {
-    if (nextDate.getDay() === 5) {
-      break;
-    }
+  while (nextDate.getDay() !== 5) {
     nextDate.setMonth(nextDate.getMonth() + 1);
   }
 
